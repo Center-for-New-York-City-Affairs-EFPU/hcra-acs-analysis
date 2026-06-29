@@ -1,0 +1,15 @@
+# Claude Code local files
+.claude/
+
+# Data files (CSV inputs and outputs) — too large / regenerable
+*.csv
+
+# Raw PUMS download
+csv_pny.zip
+psam_p36.csv
+
+# R session/artifact files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
