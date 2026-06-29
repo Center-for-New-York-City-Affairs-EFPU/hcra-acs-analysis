@@ -5,7 +5,7 @@
 ### Build the Stage 1 core table requested in
 ### "ACS data analysis for report on reforming the Health Care Reform Act (HCRA)".
 ### The table shows the NUMBER of NYS-resident workers by:
-###   (a) industry  (2-digit NAICS sectors + 3 special-interest detail industries)
+###   (a) industry  (2-digit NAICS sectors + 2 special-interest detail industries)
 ###   (b) class of worker (Private vs. Government, with private detail), and
 ###   (c) type of health insurance coverage (the 7 IPUMS/ACS HI categories
 ###       + any-coverage, uninsured, and the Stage-2 target "Medicaid or uninsured").

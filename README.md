@@ -48,13 +48,14 @@ Workers are defined by employment status recode **`ESR ∈ {1, 2, 4, 5}`** (civi
 - Weighted NYS workers: **≈ 9.54 million**
 
 ### 3.2 Industry (the rows)
-`INDP` (Census industry code, stored as an integer with leading zeros dropped) is mapped to the **2-digit NAICS sectors** highlighted in the request. Three **special-interest detail industries** are also carved out (and reported as their own rows in addition to their parent sector):
+`INDP` (Census industry code, stored as an integer with leading zeros dropped) is mapped to the **2-digit NAICS sectors** highlighted in the request. Two **special-interest detail industries** are also carved out (and reported as their own rows in addition to their parent sector):
 
 | Detail industry | `INDP` code(s) |
 |---|---|
 | Warehouse clubs, supercenters & other general merchandise retailers | 5392 |
 | Warehousing & storage | 6390 |
-| Food services & drinking places | 8680 + 8690 |
+
+> Food services & drinking places (`INDP` 8680/8690), which the brief also named, is **not** broken out as a separate detail row; its workers are still counted within the Accommodation & Food Services sector.
 
 ### 3.3 Class of worker — government separated from private
 `COW` (class of worker) is grouped so government is **separated from private**, as requested. Government here spans every sector (e.g., public schools, public hospitals, transit), not just Public Administration.
@@ -131,7 +132,6 @@ The hypothesis holds — a handful of lower-wage, service- and goods-handling in
 
 | Industry | Workers | % employer cov. | % no employer cov. | % Medicaid | % uninsured | **% Medicaid or uninsured** |
 |---|--:|--:|--:|--:|--:|--:|
-| **Food services & drinking places** ⭑ | 483,733 | 42.9 | 57.1 | 31.9 | 14.5 | **46.4** |
 | Accommodation & Food Services | 547,643 | 45.3 | 54.7 | 30.9 | 13.7 | **44.6** |
 | Agriculture, Forestry, Fishing & Hunting, and Mining | 53,696 | 46.7 | 53.3 | 19.9 | 18.6 | **38.5** |
 | **Warehousing & storage** ⭑ | 26,980 | 57.3 | 42.7 | 26.2 | 11.2 | **37.4** |
@@ -140,7 +140,7 @@ The hypothesis holds — a handful of lower-wage, service- and goods-handling in
 | Other Services, Except Public Administration | 445,004 | 54.9 | 45.1 | 24.3 | 8.8 | **33.1** |
 | Construction | 540,811 | 59.0 | 41.0 | 16.2 | 15.9 | **32.1** |
 | Transportation & Warehousing | 476,198 | 60.9 | 39.1 | 24.2 | 7.8 | **32.0** |
-| Retail Trade | 879,183 | 59.3 | 40.7 | 24.3 | 7.2 | **31.5** |
+| Retail Trade | 914,735 | 59.1 | 40.9 | 24.4 | 7.2 | **31.6** |
 | Arts, Entertainment & Recreation | 222,832 | 63.8 | 36.2 | 17.8 | 5.9 | **23.7** |
 | Health Care & Social Assistance | 1,675,139 | 70.0 | 30.0 | 18.8 | 3.7 | **22.5** |
 | **ALL INDUSTRIES (NYS workers)** | **9,535,478** | **69.7** | **30.3** | **16.1** | **5.9** | **22.0** |
@@ -148,7 +148,7 @@ The hypothesis holds — a handful of lower-wage, service- and goods-handling in
 | Real Estate and Rental & Leasing | 197,783 | 67.2 | 32.8 | 13.8 | 5.0 | 18.8 |
 | Manufacturing | 544,273 | 74.9 | 25.1 | 12.6 | 5.6 | 18.2 |
 | Educational Services | 1,117,430 | 81.5 | 18.5 | 10.4 | 2.3 | 12.7 |
-| Information | 249,395 | 79.6 | 20.4 | 9.4 | 3.2 | 12.6 |
+| Information | 263,046 | 80.3 | 19.7 | 9.1 | 3.1 | 12.2 |
 | Professional, Scientific & Technical Services | 890,063 | 79.3 | 20.7 | 7.4 | 3.1 | 10.5 |
 | Management of Companies & Enterprises | 11,039 | 87.4 | 12.6 | 6.3 | 2.6 | 8.9 |
 | Utilities | 60,418 | 89.3 | 10.7 | 5.3 | 2.8 | 8.1 |
